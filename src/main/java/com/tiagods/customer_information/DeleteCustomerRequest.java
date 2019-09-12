@@ -10,7 +10,6 @@ package com.tiagods.customer_information;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CustomerDetail" type="{http://tiagods.com/customer-information}CustomerDetail"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "customerDetail"
+    "id"
 })
-@XmlRootElement(name = "GetCustomerDetailResponse")
-public class GetCustomerDetailResponse {
+@XmlRootElement(name = "DeleteCustomerRequest")
+public class DeleteCustomerRequest {
 
-    @XmlElement(name = "CustomerDetail", required = true)
-    protected CustomerDetail customerDetail;
+    protected int id;
 
     /**
-     * Obtém o valor da propriedade customerDetail.
+     * Obtém o valor da propriedade id.
      * 
-     * @return
-     *     possible object is
-     *     {@link CustomerDetail }
-     *     
      */
-    public CustomerDetail getCustomerDetail() {
-        return customerDetail;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Define o valor da propriedade customerDetail.
+     * Define o valor da propriedade id.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link CustomerDetail }
-     *     
      */
-    public void setCustomerDetail(CustomerDetail value) {
-        this.customerDetail = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }
